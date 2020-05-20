@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Pkg\Pkg;
 use Illuminate\Http\Request;
 
-class PkgController extends Controller
+class PkgsController extends Controller
 {
     /**
      * Display a listing of the resource.
