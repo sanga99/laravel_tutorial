@@ -16,7 +16,7 @@ class SubscController extends Controller
     public function index()
     {
         $outs = Subsc::all();
-        return new SubscCollection($outs);
+        return new SubscController($outs);
     }
 
     /**

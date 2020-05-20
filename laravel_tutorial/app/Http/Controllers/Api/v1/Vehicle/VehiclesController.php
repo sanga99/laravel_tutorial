@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\v1\Vehicle;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\Vehicle\VehicleCollection;
 use App\Models\Vehicle\Vehicle;
 use Illuminate\Http\Request;
 

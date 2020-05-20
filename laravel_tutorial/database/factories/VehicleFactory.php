@@ -2,11 +2,12 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Model;
+
+use App\Models\Vehicle\Vehicle;
 use Faker\Generator as Faker;
 
-$factory->define(Model::class, function (Faker $faker) {
+$factory->define(Vehicle::class, function (Faker $faker) {
     return [
-        'title' => $faker->setence,
+        'title' => $faker->sentence,
     ];
 });

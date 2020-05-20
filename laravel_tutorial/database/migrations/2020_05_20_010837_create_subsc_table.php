@@ -13,7 +13,7 @@ class CreateSubscTable extends Migration
      */
     public function up()
     {
-        Schema::create('subsc', function (Blueprint $table) {
+        Schema::create('subscs', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->timestamps();

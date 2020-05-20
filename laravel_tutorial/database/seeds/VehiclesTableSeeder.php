@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Vehicle\Vehicle;
 use Illuminate\Database\Seeder;
 
 class VehiclesTableSeeder extends Seeder

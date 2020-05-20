@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Subsc\Subsc;
 use Illuminate\Database\Seeder;
 
 class SubscTableSeeder extends Seeder

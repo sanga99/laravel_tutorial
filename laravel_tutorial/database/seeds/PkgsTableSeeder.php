@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Pkg\Pkg;
 use Illuminate\Database\Seeder;
 
 class PkgsTableSeeder extends Seeder

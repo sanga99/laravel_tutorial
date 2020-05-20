@@ -2,10 +2,10 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Pgk;
+use App\Models\Pkg\Pkg;
 use Faker\Generator as Faker;
 
-$factory->define(Pgk::class, function (Faker $faker) {
+$factory->define(Pkg::class, function (Faker $faker) {
     return [
         'title' => $faker->sentence,
     ];
