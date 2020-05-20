@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Api\v1\Pkg;
+namespace App\Http\Controllers\Api\v1\Subsc;
 
 use App\Http\Controllers\Controller;
-use App\Models\Pkg\Pkg;
+use App\Models\Subsc\Subsc;
 use Illuminate\Http\Request;
 
-class PkgController extends Controller
+class SubscController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class PkgController extends Controller
      */
     public function index()
     {
-        $outs = Pkg::all();
-        return new PkgCollection($outs);
+        $outs = Subsc::all();
+        return new SubscCollection($outs);
     }
 
     /**
@@ -33,22 +33,22 @@ class PkgController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Pkg\Pkg  $pkg
+     * @param  \App\Models\Subsc\Subsc  $subsc
      * @return \Illuminate\Http\Response
      */
-    public function show(Pkg $pkg)
+    public function show(Subsc $subsc)
     {
-        return new PkgResource($pkg);
+        return new SubscResource($subsc);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Pkg\Pkg  $pkg
+     * @param  \App\Models\Subsc\Subsc  $subsc
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Pkg $pkg)
+    public function update(Request $request, Subsc $subsc)
     {
         //
     }
@@ -56,10 +56,10 @@ class PkgController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Pkg\Pkg  $pkg
+     * @param  \App\Models\Subsc\Subsc  $subsc
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Pkg $pkg)
+    public function destroy(Subsc $subsc)
     {
         //
     }

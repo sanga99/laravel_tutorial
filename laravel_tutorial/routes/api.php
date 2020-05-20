@@ -19,3 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::resource('/prods', 'Api\v1\Prod\ProdsController');
 Route::resource('/pkgs', 'Api\v1\Pkg\PkgsController');
+Route::resource('/subsc', 'Api\v1\Subsc\SubscController');
