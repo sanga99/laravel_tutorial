@@ -77,6 +77,7 @@ class ProdsController extends Controller
      */
     public function destroy(Prod $prod)
     {
-        //
+        $outs = $prod-> delete();
+        return response()-> json($outs, Response::HTTP_OK,[], JSON_PRETTY_PRINT);
     }
 }
