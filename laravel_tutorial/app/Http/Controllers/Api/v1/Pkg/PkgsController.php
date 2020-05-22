@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\v1\Pkg;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Pkg\PkgCollection;
+use App\Http\Resources\Pkg\PkgResource;
 use App\Models\Pkg\Pkg;
 use Illuminate\Http\Request;
 

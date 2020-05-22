@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Api\v1\Subsc;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\Subsc\SubscCollection;
+use App\Http\Resources\Subsc\SubscResource;
 use App\Models\Subsc\Subsc;
 use Illuminate\Http\Request;
 
-class SubscController extends Controller
+class SubscsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +18,7 @@ class SubscController extends Controller
     public function index()
     {
         $outs = Subsc::all();
-        return new SubscController($outs);
+        return new SubscCollection($outs);
     }
 
     /**

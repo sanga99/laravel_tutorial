@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSubscTable extends Migration
+class CreateSubscsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -27,6 +27,6 @@ class CreateSubscTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('subsc');
+        Schema::dropIfExists('subscs');
     }
 }

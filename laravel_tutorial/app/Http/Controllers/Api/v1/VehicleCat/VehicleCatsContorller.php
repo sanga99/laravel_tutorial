@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\v1\VehicleCat;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\VehicleCat\VehicleCatCollection;
+use App\Http\Resources\VehicleCat\VehicleCatResource;
 use App\Models\VehicleCat\VehicleCat;
 use Illuminate\Http\Request;
 

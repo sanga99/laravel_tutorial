@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\v1\Vehicle;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Vehicle\VehicleCollection;
+use App\Http\Resources\Vehicle\VehicleResource;
 use App\Models\Vehicle\Vehicle;
 use Illuminate\Http\Request;
 
@@ -39,7 +40,7 @@ class VehiclesController extends Controller
      */
     public function show(Vehicle $vehicle)
     {
-        return new Vehicleresource($vehicle);
+        return new VehicleResource($vehicle);
     }
 
     /**

@@ -3,7 +3,7 @@
 use App\Models\Subsc\Subsc;
 use Illuminate\Database\Seeder;
 
-class SubscTableSeeder extends Seeder
+class SubscsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
