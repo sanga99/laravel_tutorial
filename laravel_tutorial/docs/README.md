@@ -12,7 +12,9 @@
   * php artisan serve
 
 
-*****
+
+
+
 
 ## backend 구조 settings
 
@@ -52,7 +54,9 @@
 
 
 
-*****
+
+
+
 
 ## artisan 명령어
 
