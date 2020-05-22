@@ -7,6 +7,8 @@ use App\Http\Resources\Prod\ProdCollection;
 use App\Http\Resources\Prod\ProdResource;
 use App\Models\Prod\Prod;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use Symfony\Component\HttpFoundation\Response;
 
 class ProdsController extends Controller
 {
@@ -29,7 +31,11 @@ class ProdsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $outs = Prod::created([
+        //     'title' => $request->input('title'),
+        // ]);
+
+        // return new ProdResource($outs);
     }
 
     /**
@@ -53,7 +59,14 @@ class ProdsController extends Controller
      */
     public function update(Request $request, Prod $prod)
     {
-        //
+        Log::info(__METHOD__);
+        Log::info($request->all());
+
+        $outs = $prod->update($request->all());
+        //dd('test' . $outs);
+
+        return response()->json($outs, Response::HTTP_OK, [], JSON_PRETTY_PRINT);
+        // return response()->json($outs);
     }
 
     /**
