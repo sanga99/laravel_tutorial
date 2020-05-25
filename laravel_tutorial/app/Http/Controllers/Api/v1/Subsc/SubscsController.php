@@ -71,6 +71,7 @@ class SubscsController extends Controller
      */
     public function destroy(Subsc $subsc)
     {
-        //
+        $outs = $subsc -> delete();
+        return response()->json($outs, Response::HTTP_OK,[], JSON_PRETTY_PRINT);
     }
 }

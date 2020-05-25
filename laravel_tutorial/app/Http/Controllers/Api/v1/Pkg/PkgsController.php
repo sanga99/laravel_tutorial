@@ -71,6 +71,7 @@ class PkgsController extends Controller
      */
     public function destroy(Pkg $pkg)
     {
-        //
+        $outs = $pkg -> delete();
+        return response() -> json($outs, Response::HTTP_OK,[], JSON_PRETTY_PRINT);
     }
 }
