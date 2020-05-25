@@ -31,11 +31,11 @@ class ProdsController extends Controller
      */
     public function store(Request $request)
     {
-        // $outs = Prod::created([
-        //     'title' => $request->input('title'),
-        // ]);
+        $outs = Prod::create([
+            'title' => $request->input('title'),
+        ]);
 
-        // return new ProdResource($outs);
+        return new ProdResource($outs);
     }
 
     /**
@@ -63,7 +63,6 @@ class ProdsController extends Controller
         Log::info($request->all());
 
         $outs = $prod->update($request->all());
-        //dd('test' . $outs);
 
         return response()->json($outs, Response::HTTP_OK, [], JSON_PRETTY_PRINT);
         // return response()->json($outs);
