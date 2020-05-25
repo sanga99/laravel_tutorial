@@ -7,6 +7,8 @@ use App\Http\Resources\Pkg\PkgCollection;
 use App\Http\Resources\Pkg\PkgResource;
 use App\Models\Pkg\Pkg;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use Symfony\Component\HttpFoundation\Response;
 
 class PkgsController extends Controller
 {
@@ -52,7 +54,13 @@ class PkgsController extends Controller
      */
     public function update(Request $request, Pkg $pkg)
     {
-        //
+        Log::info(__METHOD__);
+        Log::info($request->all());
+
+        $outs = $pkg->update($request->all());
+
+        return response()->json($outs, Response::HTTP_OK,[], JSON_PRETTY_PRINT);
+        // return response()->json($outs);
     }
 
     /**

@@ -7,6 +7,8 @@ use App\Http\Resources\Vehicle\VehicleCollection;
 use App\Http\Resources\Vehicle\VehicleResource;
 use App\Models\Vehicle\Vehicle;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use Symfony\Component\HttpFoundation\Response;
 
 class VehiclesController extends Controller
 {
@@ -52,7 +54,13 @@ class VehiclesController extends Controller
      */
     public function update(Request $request, Vehicle $vehicle)
     {
-        //
+        Log::info(__METHOD__);
+        Log::info($request->all());
+
+        $outs = $vehicle->update($request->all());
+
+        return response()->json($outs, Response::HTTP_OK, [], JSON_PRETTY_PRINT);
+        // return response()->json($outs);
     }
 
     /**

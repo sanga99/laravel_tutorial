@@ -7,6 +7,8 @@ use App\Http\Resources\Subsc\SubscCollection;
 use App\Http\Resources\Subsc\SubscResource;
 use App\Models\Subsc\Subsc;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use Symfony\Component\HttpFoundation\Response;
 
 class SubscsController extends Controller
 {
@@ -52,7 +54,13 @@ class SubscsController extends Controller
      */
     public function update(Request $request, Subsc $subsc)
     {
-        //
+        Log::info(__METHOD__);
+        Log::info($request->all());
+
+        $outs = $subsc->update($request->all());
+
+        return response()->json($outs, Response::HTTP_OK, [], JSON_PRETTY_PRINT);
+        // return response()->json($outs);
     }
 
     /**
