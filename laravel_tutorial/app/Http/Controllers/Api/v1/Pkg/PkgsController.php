@@ -31,7 +31,11 @@ class PkgsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $outs = Pkg::create([
+            'title' => $request->input('title'),
+        ]);
+
+        return new PkgResource($outs);
     }
 
     /**

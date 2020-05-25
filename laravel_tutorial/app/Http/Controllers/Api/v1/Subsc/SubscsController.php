@@ -31,7 +31,11 @@ class SubscsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $outs = Subsc::create([
+            'title' => $request->input('title'),
+        ]);
+
+        return new SubscResource($outs);
     }
 
     /**

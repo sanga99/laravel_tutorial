@@ -31,7 +31,11 @@ class VehiclesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $outs = Vehicle::create([
+            'title' => $request->input('title'),
+        ]);
+
+        return new VehicleResource($outs);
     }
 
     /**
